@@ -5,8 +5,16 @@
     <%= f.text_field :email %>
   </p>
   <p>
-    <%= f.label :pledged_public_support, "I would like to pledge my public support!" %>
+    <%= f.label :pledged_public_support, "I would like to publicly pledge my support!" %>
     <%= f.check_box :pledged_public_support %>
+  </p>
+  <p>
+    <%= f.label :name, "Name:" %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :message, "Message:" %>
+    <%= f.text_area :message %>
   </p>
   <%= submit_tag 'Create' %>
 <% end %>
