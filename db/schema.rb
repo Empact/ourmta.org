@@ -9,12 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090725204759) do
+ActiveRecord::Schema.define(:version => 20090725214606) do
 
   create_table "supporters", :force => true do |t|
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "pledged_public_support", :default => false
   end
 
 end

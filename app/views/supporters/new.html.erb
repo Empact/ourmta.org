@@ -1,6 +1,13 @@
 <h1>Sign up to FixMta.org</h1>
 <% form_for :supporter, @supporter, :url => { :action => "create" } do |f| %>
-  <%= f.text_field :email %>
+  <p>
+    <%= f.label :email, "E-mail:" %>
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :pledged_public_support, "I would like to pledge my public support!" %>
+    <%= f.check_box :pledged_public_support %>
+  </p>
   <%= submit_tag 'Create' %>
 <% end %>
 
