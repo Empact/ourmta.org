@@ -17,5 +17,12 @@ describe SupportersController do
       }.should change(Supporter, :count).by(1)
       response.should redirect_to(:controller => "home", :action => "index")
     end
+
+    it "should not create a supporter who has pledged public support but has not provided a name" do
+      lambda {
+        post :create, {:supporter => {:email => Faker::Internet.email, :pledged_public_support => true}}
+      }.should_not change(Supporter, :count)
+      response.should redirect_to(:action => "new")       
+    end
   end
 end

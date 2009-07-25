@@ -14,7 +14,7 @@ describe Supporter do
   describe ".public" do
     it "should return users who have publicly pledged their support" do
       create_supporter(:pledged_public_support => false)
-      create_supporter(:pledged_public_support => true)
+      create_supporter(:pledged_public_support => true, :name => Faker::Name.new)
 
       Supporter.public.count.should == 1
     end
