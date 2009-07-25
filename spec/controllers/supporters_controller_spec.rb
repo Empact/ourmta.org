@@ -9,4 +9,13 @@ describe SupportersController do
       response.body.should include("Sign up to FixMta.org")
     end
   end
+
+  describe "POST create" do
+    it "should create a new supporter" do
+      lambda { 
+        post :create, {:supporter => {:email => Faker::Internet.email}}
+      }.should change(Supporter, :count).by(1)
+      response.should redirect_to(:controller => "home", :action => "index")
+    end
+  end
 end

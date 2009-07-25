@@ -1,1 +1,6 @@
 <h1>Sign up to FixMta.org</h1>
+<% form_for :supporter, @supporter, :url => { :action => "create" } do |f| %>
+  <%= f.text_field :email %>
+  <%= submit_tag 'Create' %>
+<% end %>
+
