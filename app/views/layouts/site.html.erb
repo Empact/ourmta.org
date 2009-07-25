@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>FixMta.org: New York deserves Better Transit<%= " - #{@page_title}" if @page_title %></title>
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
+    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+    <!--[if lt IE 8]>
+      <%= stylesheet_link_tag 'blueprint/ie', :media => 'screen, projection' %>
+    <![endif]-->
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>
