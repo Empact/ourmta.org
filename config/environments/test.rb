@@ -14,6 +14,9 @@ config.action_controller.consider_all_requests_local = true
 config.action_controller.perform_caching             = false
 config.action_view.cache_template_loading            = true
 
+config.gem "fixjour"
+config.gem "faker"
+
 # Disable request forgery protection in test environment
 config.action_controller.allow_forgery_protection    = false
 
