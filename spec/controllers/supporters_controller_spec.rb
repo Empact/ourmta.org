@@ -22,7 +22,7 @@ describe SupportersController do
       lambda {
         post :create, {:supporter => {:email => Faker::Internet.email, :pledged_public_support => true}}
       }.should_not change(Supporter, :count)
-      response.should redirect_to(:action => "new")       
+      response.body.should include("Name must be present if you are pledging public support")       
     end
   end
 end

@@ -8,7 +8,7 @@ class SupportersController < ApplicationController
     if @supporter.save
       redirect_to root_path
     else
-      redirect_to new_supporter_path
+      render :action => "new"
     end
   end
 end
