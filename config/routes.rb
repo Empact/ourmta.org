@@ -30,9 +30,15 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
-  map.resources :supporters
+  map.root :controller => "information", :action => "index"
 
-  map.root :controller => "home"
+  map.pledge_support 'pledge_support', :controller => 'supporters', :action => 'new'
+
+  map.with_options :controller => "information" do |map|
+    %w(problems possibilities proposal).each do |action|
+      map.send(:"#{action}_information", action, :action => action)
+    end
+  end
 
   # See how all your routes lay out with "rake routes"
 

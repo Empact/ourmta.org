@@ -11,6 +11,16 @@
     <![endif]-->
   </head>
   <body>
+    <div class="header">
+      <span>FixMta.org</span>
+      <span>New York Deserves Better Transit</span>
+      <ul>
+        <li><%= link_to 'Our Stagnating System', problems_information_path %></li>
+        <li><%= link_to 'The Beauty Abroad', possibilities_information_path %></li>
+        <li><%= link_to 'The Upstate Problem, The Downstate Solution', proposal_information_path %></li>
+        <li><%= link_to 'Pledge Your Support', pledge_support_path %></li>
+      </ul>
+    </div>
     <%= yield %>
   </body>
 </html>
