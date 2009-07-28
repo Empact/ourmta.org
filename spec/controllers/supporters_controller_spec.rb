@@ -26,6 +26,8 @@ describe SupportersController do
       response.should redirect_to(:controller => "information", :action => "index")
     end
 
+    it "should send the user an email including links on how to edit their support"
+
     context "when the same email address has already been submitted" do
       def signup_duplicate_email
         do_post(:email => 'bob@mta.info')
