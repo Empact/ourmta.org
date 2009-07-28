@@ -6,7 +6,7 @@ class Supporter < ActiveRecord::Base
   validates_presence_of :name,
                         :if => lambda { |supporter| supporter.pledged_public_support },
                         :message => "must be present if you are pledging public support"
-  validates_uniqueness_of :email
+  validates_uniqueness_of :email, :message => "has already been submitted.  If you haven't caught word from us, check to see that our messages aren't being sent to your spam filter!"
 
 
   named_scope :public, {:conditions => {:pledged_public_support => true}}

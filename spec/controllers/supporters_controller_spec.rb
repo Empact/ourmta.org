@@ -26,6 +26,25 @@ describe SupportersController do
       response.should redirect_to(:controller => "home", :action => "index")
     end
 
+    context "when the same email address has already been submitted" do
+      def signup_duplicate_email
+        do_post(:email => 'bob@mta.info')
+        do_post(:email => 'bob@mta.info')
+      end
+
+      it "should not include an ugly 'prohibited this user message'" do
+        signup_duplicate_email
+        response.body.should_not include("error prohibited this supporter from being saved")
+      end
+
+      it "should notify the user to check their spam filter" do
+        signup_duplicate_email
+        response.body.should include("Email has already been submitted.  If you haven't caught word from us, check to see that our messages aren't being sent to your spam filter!")
+      end
+
+      it "should notify the user at the provided email address (with update links)"
+    end
+
     context "when the user has pledged public support" do
       context "but has not provided a name" do
         it "should not create a supporter" do
