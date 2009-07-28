@@ -23,7 +23,7 @@ describe SupportersController do
 
     it "should redirect to home" do
       do_post
-      response.should redirect_to(:controller => "home", :action => "index")
+      response.should redirect_to(:controller => "information", :action => "index")
     end
 
     context "when the same email address has already been submitted" do
