@@ -9,4 +9,9 @@ describe Supporter do
       Supporter.public.should == [public_supporter]
     end
   end
+
+  it "should validate uniqueness of email" do
+    create_supporter(:email => 'bob@mta.info')
+    new_supporter(:email => 'bob@mta.info').should_not be_valid
+  end
 end

@@ -6,6 +6,8 @@ class Supporter < ActiveRecord::Base
   validates_presence_of :name,
                         :if => lambda { |supporter| supporter.pledged_public_support },
                         :message => "must be present if you are pledging public support"
+  validates_uniqueness_of :email
+
 
   named_scope :public, {:conditions => {:pledged_public_support => true}}
 end
