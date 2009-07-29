@@ -1,0 +1,16 @@
+.picture {
+	background-color: #F9F9F9;
+	border: 1px solid #CCCCCC;
+	padding: 3px;
+	font: 11px/1.4em Arial, sans-serif;
+	max-width: 40%;
+}
+.picture img {
+	border: 1px solid #CCCCCC;
+	vertical-align:middle;
+	margin-bottom: 3px;
+	width: 100%;
+}
+
+.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
