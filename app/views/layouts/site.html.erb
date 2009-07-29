@@ -11,7 +11,7 @@
     <![endif]-->
   </head>
   <body>
-    <div class="header">
+    <div class="header container">
       <span>FixMta.org</span>
       <span>New York Deserves Better Transit</span>
       <ul>
@@ -21,8 +21,10 @@
         <li><%= link_to 'Pledge Your Support', pledge_support_path %></li>
       </ul>
     </div>
-    <%= yield %>
-    <div class="footer">
+    <div class="container">
+      <%= yield %>
+    </div>
+    <div class="footer container">
       <ul>
         <li>About Us</li>
         <li>Contact</li>
