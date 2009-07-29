@@ -11,8 +11,8 @@
     <![endif]-->
     <%= stylesheet_link_tag 'site' %>
   </head>
-  <body>
-    <div class="header container">
+  <body class="container">
+    <div class="header">
       <span><%= link_to_unless_current 'FixMta.org', root_path %></span>
       <span>New York Deserves Better Transit</span>
       <ul>
@@ -22,10 +22,10 @@
         <li><%= link_to_unless_current 'Pledge Your Support', pledge_support_path %></li>
       </ul>
     </div>
-    <div class="container">
+    <div>
       <%= yield %>
     </div>
-    <div class="footer container">
+    <div class="footer">
       <ul>
         <li>About Us</li>
         <li>Contact</li>
