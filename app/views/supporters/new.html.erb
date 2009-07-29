@@ -1,3 +1,4 @@
+<%- @page_title = 'Pledge Your Support' -%>
 <h1>Sign up to FixMta.org</h1>
 <% form_for :supporter, @supporter, :url => { :action => "create" } do |f| %>
   <%= f.error_messages :header_message => "Our apologies, a quick issue to fix before we can contact you..." %>
