@@ -1,3 +1,36 @@
+html {
+	/* http://www.flickr.com/photos/manu_le_manu/253645920/ */
+	background-image: url(../images/full_speed_ahead.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	padding-bottom: 230px;
+}
+
+body {
+	background-color: #F5FFFA;
+	border: solid 2px #D3D3D3;
+}
+
+/* flatten nav lists */
+ul.nav {
+	list-style-type: none;
+	white-space: nowrap;
+	text-align: center;
+}
+
+ul.nav li {
+	display: inline;
+}
+
+/* place a bullet between entries in a horizontal list */
+ul.nav li + li:before{
+	content: " \002022  ";
+}
+
+.content {
+	padding: 0 3em;
+}
+
 .picture {
 	background-color: #F9F9F9;
 	border: 1px solid #CCCCCC;

@@ -15,14 +15,14 @@
     <div class="header">
       <span><%= link_to_unless_current 'FixMta.org', root_path %></span>
       <span>New York Deserves Better Transit</span>
-      <ul>
+      <ul class="nav">
         <li><%= link_to_unless_current 'Our Stagnating System', problems_information_path %></li>
         <li><%= link_to_unless_current 'The Beauty Abroad', possibilities_information_path %></li>
         <li><%= link_to_unless_current 'The Way Forward', proposal_information_path %></li>
         <li><%= link_to_unless_current 'Pledge Your Support', pledge_support_path %></li>
       </ul>
     </div>
-    <div>
+    <div class="content">
       <%= yield %>
     </div>
     <div class="footer">
