@@ -3,7 +3,9 @@ html {
 	background-image: url(../images/full_speed_ahead.jpg);
 	background-repeat: no-repeat;
 	background-position: bottom center;
+	background-color: #E6DEDC;
 	padding-bottom: 230px;
+	padding-top: 20px;
 }
 
 body {
@@ -11,19 +13,36 @@ body {
 	border: solid 2px #D3D3D3;
 }
 
+.header {
+	background-color: #AFB2A7;
+	text-align: center;
+}
+
+.header .masthead {
+	font-size: 2.5em;
+}
+
+.header .masthead:after {
+	content: " : ";
+}
+
+.header .slogan {
+	font-size: 2em;
+}
+
 /* flatten nav lists */
-ul.nav {
+.header ul.nav {
 	list-style-type: none;
 	white-space: nowrap;
 	text-align: center;
 }
 
-ul.nav li {
+.header ul.nav li {
 	display: inline;
 }
 
 /* place a bullet between entries in a horizontal list */
-ul.nav li + li:before{
+.header ul.nav li + li:before{
 	content: " \002022  ";
 }
 
@@ -43,6 +62,11 @@ ul.nav li + li:before{
 	vertical-align:middle;
 	margin-bottom: 3px;
 	width: 100%;
+}
+
+.footer {
+	width: 300px;
+	margin: auto;
 }
 
 .left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }

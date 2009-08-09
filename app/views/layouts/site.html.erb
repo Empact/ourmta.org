@@ -13,8 +13,8 @@
   </head>
   <body class="container">
     <div class="header">
-      <span><%= link_to_unless_current 'FixMta.org', root_path %></span>
-      <span>New York Deserves Better Transit</span>
+      <span class="masthead"><%= link_to_unless_current 'FixMta.org', root_path %></span>
+      <span class="slogan">New York Deserves Better Transit</span>
       <ul class="nav">
         <li><%= link_to_unless_current 'Our Stagnating System', problems_information_path %></li>
         <li><%= link_to_unless_current 'The Beauty Abroad', possibilities_information_path %></li>
@@ -26,7 +26,13 @@
       <%= yield %>
     </div>
     <div class="footer">
-      <ul>
+      <ul class="nav left">
+        <li><%= link_to_unless_current 'Our Stagnating System', problems_information_path %></li>
+        <li><%= link_to_unless_current 'The Beauty Abroad', possibilities_information_path %></li>
+        <li><%= link_to_unless_current 'The Way Forward', proposal_information_path %></li>
+        <li><%= link_to_unless_current 'Pledge Your Support', pledge_support_path %></li>
+      </ul>
+      <ul class="nav right">
         <li><%= link_to_unless_current 'About Us', people_information_path %></li>
         <li>Contact</li>
       </ul>
