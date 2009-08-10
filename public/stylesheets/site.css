@@ -4,13 +4,18 @@ html {
 	background-repeat: no-repeat;
 	background-position: bottom center;
 	background-color: #E6DEDC;
-	padding-bottom: 230px;
+	padding-bottom: 350px;
 	padding-top: 20px;
 }
 
 body {
 	background-color: #F5FFFA;
 	border: solid 2px #D3D3D3;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
 }
 
 .header {
