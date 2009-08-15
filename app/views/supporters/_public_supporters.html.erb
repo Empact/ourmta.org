@@ -1,10 +1,12 @@
 <%- public_supporters = Supporter.public -%>
-<h1>Public Supporters</h1>
+<h2>Recent Supporters</h2>
+<ul>
 <%- public_supporters.each do |public_supporter| -%>
-  <p>
+  <li>
     <%= public_supporter.name %>
     <%- if public_supporter.message -%>
       <p>"<%= public_supporter.message -%>"</p> 
     <%- end -%>
-  </p>
+  </li>
 <%- end -%>
+</ul>
