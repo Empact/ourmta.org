@@ -8,6 +8,7 @@ class Supporter < ActiveRecord::Base
                         :message => "must be present if you are pledging public support"
   validates_uniqueness_of :email, :message => "has already been submitted.  If you haven't caught word from us, check to see that our messages aren't being sent to your spam filter!"
 
-
   named_scope :public, {:conditions => {:pledged_public_support => true}}
+
+  after_create CampaignMonitorStorage.new(CAMPAIGN_MONITOR_FIXMTA_SUPPORTER_LIST_ID) if Rails.env == 'production'
 end

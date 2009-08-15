@@ -14,4 +14,8 @@ describe Supporter do
     create_supporter(:email => 'bob@mta.info')
     new_supporter(:email => 'bob@mta.info').should_not be_valid
   end
+
+  it "should repeat sign-up to Campaign Monitor" do
+
+  end
 end
