@@ -1,10 +1,10 @@
 class CampaignMonitorStorage
-  class SubscriptionError < StandardError
-  end
+  API_KEY = ENV['CAMPAIGN_MONITOR_API_KEY']
 
   def initialize(list_id)
+    raise "Invalid Campaign Monitor setup" if list_id.blank? || API_KEY.blank?
     @list_id = list_id
-    @cm = CampaignMonitor.new(CAMPAIGN_MONITOR_API_KEY)
+    @cm = CampaignMonitor.new(API_KEY)
   end
 
   def after_create(record)
