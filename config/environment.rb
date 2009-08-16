@@ -42,4 +42,4 @@ Rails::Initializer.run do |config|
 end
 
 CAMPAIGN_MONITOR_API_KEY = ENV['CAMPAIGN_MONITOR_API_KEY']
-raise "Campaign Monitor not configured #{ENV.keys.inspect}" if CAMPAIGN_MONITOR_API_KEY.blank?
+puts "Campaign Monitor not configured #{ENV.keys.inspect}" if CAMPAIGN_MONITOR_API_KEY.blank?
