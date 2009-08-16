@@ -7,6 +7,16 @@ class ApplicationController < ActionController::Base
 
   layout 'site'
 
+  before_filter :authenticate
+
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+
+  private
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |name, password|
+      name == ENV['FIXMTA_BETA_USERNAME'] && password == ENV['FIXMTA_BETA_PASSWORD']
+    end
+  end
 end
