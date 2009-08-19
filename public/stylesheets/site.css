@@ -60,7 +60,7 @@ body {
 	border: 1px solid #CCCCCC;
 	padding: 3px;
 	font: 11px/1.4em Arial, sans-serif;
-	max-width: 40%;
+	width: 55%;
 }
 .picture img {
 	border: 1px solid #CCCCCC;
@@ -75,4 +75,4 @@ body {
 }
 
 .left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
-.right { float: right; margin: 1.5em 0 1.5em 1.5em; }
+.right { float: right; margin: 0.5em 0 0.5em 1.5em; }
