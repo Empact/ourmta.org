@@ -4,10 +4,37 @@ describe InformationController do
   integrate_views
 
   describe "GET index" do
-    it "should return the home page" do
+    def do_get
       get :index
+    end
+
+    it "should return the home page" do
+      do_get
       response.body.should include("Welcome to FixMta.org")
     end
+
+    it_should_behave_like "has sign-up screen"
+  end
+
+  describe "GET problems" do
+    def do_get
+      get :problems
+    end
+    it_should_behave_like "has sign-up screen"
+  end
+
+  describe "GET possibilities" do
+    def do_get
+      get :possibilities
+    end
+    it_should_behave_like "has sign-up screen"
+  end
+
+  describe "GET suggestions" do
+    def do_get
+      get :suggestions
+    end
+    it_should_behave_like "has sign-up screen"
   end
 
 end

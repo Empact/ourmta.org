@@ -4,10 +4,11 @@ describe SupportersController do
   integrate_views
 
   describe "GET new" do
-    it "should provide a sign-up screen" do
+    def do_get
       get :new
-      response.body.should include("Sign up to FixMta.org")
     end
+
+    it_should_behave_like "has sign-up screen"
   end
 
   describe "POST create" do
