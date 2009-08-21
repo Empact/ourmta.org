@@ -5,7 +5,8 @@ class SupportersController < ApplicationController
   def create
     @supporter = Supporter.new(params[:supporter])
     if @supporter.save
-      redirect_to root_path
+      flash[:success] = "You've been signed up!  Now help us get on the job by describing or voting on the problems of your commute:"
+      redirect_to suggestions_information_path
     else
       render :action => "new"
     end

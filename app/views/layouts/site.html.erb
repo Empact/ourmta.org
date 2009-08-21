@@ -20,6 +20,10 @@
       </ul>
     </div>
     <div class="content">
+      <% if flash[:success] %>
+        <div class="success"><%= flash[:success] %></div>
+      <% end %>
+
       <%= yield %>
 
       <%= render 'supporters/sign_up_form' %>

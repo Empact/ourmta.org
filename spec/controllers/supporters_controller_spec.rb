@@ -24,7 +24,8 @@ describe SupportersController do
 
     it "should redirect to home" do
       do_post
-      response.should redirect_to(:controller => "information", :action => "index")
+      response.should redirect_to(suggestions_information_path)
+      response.flash[:success].should include("You've been signed up!  Now help us get on the job by describing or voting on the problems of your commute:")
     end
 
     it "should send the user an email including links on how to edit their support"
