@@ -32,7 +32,6 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => "information", :action => "index"
 
-  map.pledge_support 'pledge_support', :controller => 'supporters', :action => 'new'
   map.resources :supporters
 
   map.with_options :controller => "information" do |map|
