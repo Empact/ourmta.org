@@ -4,7 +4,7 @@ html {
 	background-repeat: no-repeat;
 	background-position: bottom center;
 	background-color: #E6DEDC;
-	padding-bottom: 350px;
+	padding-bottom: 250px;
 	padding-top: 20px;
 }
 
@@ -14,7 +14,6 @@ body {
 }
 
 .container {
-  width: 1024px;
   margin: 0 auto;
 }
 
