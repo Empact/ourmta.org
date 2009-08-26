@@ -39,6 +39,7 @@ body {
 	list-style-type: none;
 	white-space: nowrap;
 	text-align: center;
+	font-size: 1.3em;
 }
 
 .header ul.nav li {
