@@ -74,5 +74,5 @@ body {
 	margin: auto;
 }
 
-.left  { float: left; margin: 1.5em 1.5em 1.5em 0; padding: 0; }
+.left  { float: left; margin: 0.5em 1.5em 0.5em 0; padding: 0; }
 .right { float: right; margin: 0.5em 0 0.5em 1.5em; }
