@@ -10,5 +10,5 @@ class Supporter < ActiveRecord::Base
 
   named_scope :public, {:conditions => {:pledged_public_support => true}}
 
-  after_create CampaignMonitorStorage.new(ENV['CAMPAIGN_MONITOR_FIXMTA_SUPPORTER_LIST_ID']) if Rails.env == 'production'
+  after_create MailingListStorage.new(ENV['MAIL_CHIMP_FIXMTA_SUPPORTER_LIST_ID']) if Rails.env == 'production'
 end
