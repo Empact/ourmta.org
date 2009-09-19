@@ -20,8 +20,10 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate
-    authenticate_or_request_with_http_basic do |name, password|
-      name == ENV['FIXMTA_BETA_USERNAME'] && password == ENV['FIXMTA_BETA_PASSWORD']
+    unless @exclude_from_authentication
+      authenticate_or_request_with_http_basic do |name, password|
+        name == ENV['FIXMTA_BETA_USERNAME'] && password == ENV['FIXMTA_BETA_PASSWORD']
+      end
     end
   end
 end

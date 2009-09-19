@@ -13,6 +13,7 @@ class SupportersController < ApplicationController
   end
 
   def thank_you
+    @exclude_from_authentication = true
     render :action => 'thank_you', :layout => 'simple'
   end
 end
