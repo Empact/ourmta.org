@@ -12,7 +12,7 @@ class SupportersController < ApplicationController
     end
   end
 
-  def signup_notification
-    render :action => 'signup_notification', :layout => 'simple'
+  def thank_you
+    render :action => 'thank_you', :layout => 'simple'
   end
 end
