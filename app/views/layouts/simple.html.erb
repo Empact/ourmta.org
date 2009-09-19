@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>FixMta.org: <%= @page_title || 'New York Deserves Better Transit' %></title>
+    <%= javascript_include_tag :defaults %>   
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
+    <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+    <!--[if lt IE 8]>
+      <%= stylesheet_link_tag 'blueprint/ie', :media => 'screen, projection' %>
+    <![endif]-->
+    <%= stylesheet_link_tag 'site' %>
+  </head>
+  <body class="container">
+    <div class="header">
+    <span class="masthead"><%= link_to_unless_current 'FixMta.org', root_path %></span>
+    <span class="slogan">New York Deserves Better Transit</span>
+    <%= yield :header %>
+  </div>
+  <div class="content">
+    <%= yield(:content) or yield %>
+  </div>
+  <div class="footer">
+    <%= yield :footer %>
+  </div>
+  </body>
+</html>
