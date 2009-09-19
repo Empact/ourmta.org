@@ -40,6 +40,7 @@ body {
 	white-space: nowrap;
 	text-align: center;
 	font-size: 1.3em;
+	margin-bottom: 0;
 }
 
 .header ul.nav li {
@@ -52,7 +53,7 @@ body {
 }
 
 .content {
-	padding: 0 3em;
+	padding: 1.5em 3em;
 }
 
 .picture {
