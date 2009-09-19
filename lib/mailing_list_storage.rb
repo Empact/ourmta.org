@@ -5,7 +5,7 @@ class MailingListStorage
     raise "Invalid mail list storage setup: no list id" if list_id.blank?
     raise "Invalid mail list storage setup: no api key" if API_KEY.blank?
     @list_id = list_id
-    @hominid = Hominid.new(:api_key => API_KEY)
+    @hominid = Hominid.new(:api_key => API_KEY, :send_notify => true)
   end
 
   def after_create(record)
