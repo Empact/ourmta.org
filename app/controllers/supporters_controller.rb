@@ -11,4 +11,8 @@ class SupportersController < ApplicationController
       render :action => "new"
     end
   end
+
+  def signup_notification
+    render :action => 'signup_notification', :layout => 'simple'
+  end
 end

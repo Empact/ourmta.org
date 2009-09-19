@@ -32,7 +32,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.root :controller => "information", :action => "index"
 
-  map.resources :supporters
+  map.resources :supporters, :collection => {:signup_notification => :get}
 
   map.with_options :controller => "information" do |map|
     %w(problems possibilities proposal people suggestions).each do |action|
