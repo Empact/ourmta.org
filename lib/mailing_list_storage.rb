@@ -9,6 +9,6 @@ class MailingListStorage
   end
 
   def after_create(record)
-    @hominid.subscribe(@list_id, record.email, {:NAME => record.name.to_s}, 'html')
+    @hominid.subscribe(@list_id, record.email, :user_info => {:NAME => record.name.to_s})
   end
 end
