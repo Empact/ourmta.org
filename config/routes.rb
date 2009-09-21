@@ -30,7 +30,7 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
-  map.root :controller => "information", :action => "placeholder" # "index"
+  map.root :controller => "information", :action => "index"
 
   map.resources :supporters, :collection => {:thank_you => :get}
 
