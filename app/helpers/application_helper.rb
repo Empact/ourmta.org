@@ -3,4 +3,8 @@ module ApplicationHelper
   def email_address_path
     'mailto:fixthemta@gmail.com'
   end
+
+  def blog_path
+    'http://fixmta.tumblr.com/'
+  end
 end
