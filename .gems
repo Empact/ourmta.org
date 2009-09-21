@@ -1,1 +1,1 @@
-Empact-hominid --source http://gems.github.com
+Empact-hominid --version ">= 1.2.0" --source http://gems.github.com
