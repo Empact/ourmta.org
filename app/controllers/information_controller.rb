@@ -10,4 +10,8 @@ class InformationController < ApplicationController
 
   def proposal
   end
+
+  def placeholder
+    render :layout => 'simple'
+  end
 end
