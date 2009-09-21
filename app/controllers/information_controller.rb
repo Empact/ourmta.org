@@ -12,6 +12,5 @@ class InformationController < ApplicationController
   end
 
   def placeholder
-    render :layout => 'simple'
   end
 end
