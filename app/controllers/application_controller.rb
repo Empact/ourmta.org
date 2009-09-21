@@ -7,7 +7,6 @@ class ApplicationController < ActionController::Base
 
   layout 'site'
 
-  before_filter :authenticate, :except => [:thank_you, :placeholder]
   before_filter :prepare_supporter
 
   # Scrub sensitive parameters from your log
@@ -17,11 +16,5 @@ class ApplicationController < ActionController::Base
 
   def prepare_supporter
     @supporter = Supporter.new
-  end
-
-  def authenticate
-    authenticate_or_request_with_http_basic do |name, password|
-      name == ENV['FIXMTA_BETA_USERNAME'] && password == ENV['FIXMTA_BETA_PASSWORD']
-    end
   end
 end
