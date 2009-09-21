@@ -11,17 +11,19 @@
     <![endif]-->
     <%= stylesheet_link_tag 'site' %>
   </head>
-  <body class="container">
-    <div class="header">
-    <span class="masthead"><%= link_to_unless_current 'FixMta.org', root_path %></span>
-    <span class="slogan">New York Deserves Better Transit</span>
-    <%= yield :header %>
-  </div>
-  <div class="content">
-    <%= yield(:content) or yield %>
-  </div>
-  <div class="footer">
-    <%= yield :footer %>
-  </div>
+  <body class="frame">
+    <div class="container">
+      <div class="header">
+        <span class="masthead"><%= link_to_unless_current 'FixMta.org', root_path %></span>
+        <span class="slogan">New York Deserves Better Transit</span>
+        <%= yield :header %>
+      </div>
+      <div class="content">
+        <%= yield(:content) or yield %>
+      </div>
+      <div class="footer">
+        <%= yield :footer %>
+      </div>
+    </div>
   </body>
 </html>

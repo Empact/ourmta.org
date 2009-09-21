@@ -1,20 +1,22 @@
 html {
 	/* http://www.flickr.com/photos/manu_le_manu/253645920/ */
-	background-image: url(../images/full_speed_ahead.jpg);
-	background-repeat: no-repeat;
-	background-position: bottom center;
 	background-color: #E6DEDC;
-	padding-bottom: 250px;
 	padding-top: 20px;
 }
 
-body {
-	background-color: #F5FFFA;
-	border: solid 2px #D3D3D3;
+.frame {
+	width: 953px;
+	margin: 0 auto;
+	background-image: url(../images/full_speed_ahead.jpg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	padding-bottom: 280px;
+	border: 2px solid #A6A6A6;
 }
 
 .container {
-  margin: 0 auto;
+	background-color: #F5FFFA;
+	border: solid 2px #D3D3D3;
 }
 
 .header {
