@@ -7,4 +7,8 @@ module ApplicationHelper
   def blog_path
     'http://fixmta.tumblr.com/'
   end
+
+  def meetup_group_path
+    'http://www.meetup.com/FixMta-Action-Meetup-Group/'
+  end
 end
