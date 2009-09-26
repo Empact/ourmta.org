@@ -1,5 +1,5 @@
 <div class="left location">
-  <%= event_time(event) %>
+  <span class="time"><%= event_time(event) %></span>
   <address class="bottom">
     <%= link_to event.venue_name, venue_url(event) %><br />
     <%= event.venue_address1 %><br />
