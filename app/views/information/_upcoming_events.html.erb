@@ -1,0 +1,7 @@
+<h2>Upcoming Events</h2>
+
+<ul>
+  <%- Meetup::Event.all.each do |event| -%>
+    <li><%= event.inspect %></li>
+  <%- end -%>
+</ul>
