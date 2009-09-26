@@ -1,0 +1,8 @@
+<h2>Upcoming Events</h2>
+
+<ol class="events">
+  <%- Meetup::Event.all.each do |event| -%>
+    <li><%= render 'meetup/events/event', :event => event %></li>
+  <%- end -%>
+</ol>
+<p>For more, <%= link_to 'join our Meetup group', meetup_group_path %></p>
