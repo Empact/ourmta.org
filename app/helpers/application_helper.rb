@@ -11,4 +11,8 @@ module ApplicationHelper
   def meetup_group_path
     'http://www.meetup.com/FixMta-Action-Meetup-Group/'
   end
+
+  def slogan
+    'Because New York Deserves Better Transit'
+  end
 end
