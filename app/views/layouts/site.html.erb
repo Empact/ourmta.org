@@ -1,6 +1,7 @@
 <%- content_for :header do -%>
   <ul class="nav">
-    <%= render 'layouts/navigation_links' %>
+    <%= render 'information/links' %>
+    <%= render 'actions/links' %>
   </ul>
 <%- end -%>
 <%- content_for :content do -%>
@@ -17,14 +18,29 @@
 
 <%- end -%>
 <%- content_for :footer do -%>
-  <ul class="nav left">
-    <%= render 'layouts/navigation_links' %>
-  </ul>
-  <ul class="nav right">
-    <li><%= link_to_unless_current 'About Us', people_information_path %></li>
-    <li><%= link_to 'Our Blog', blog_path %></li>
-    <li><%= link_to 'Contact Us', email_address_path %></li>
-  </ul>
+  <div class="nav">
+    <div class="column span-5 prepend-5">
+      <span>Info</span>
+      <ul class="nav">
+        <%= render 'information/links' %>
+      </ul>
+    </div>
+    <div class="column span-5">
+      <span>Actions</span>
+      <ul class="nav">
+        <%= render 'actions/links' %>
+        <li><%= link_to 'Join the Meetup', meetup_group_path %></li>
+      </ul>
+    </div>
+    <div class="last column span-5">
+      <span>Us</span>
+      <ul class="nav">
+        <li><%= link_to_unless_current 'About Us', people_information_path %></li>
+        <li><%= link_to 'Our Blog', blog_path %></li>
+        <li><%= link_to 'Contact Us', email_address_path %></li>
+      </ul>
+    </div>
+  </div>
 <%- end -%>
 
 <%= render :file => 'layouts/simple' -%>

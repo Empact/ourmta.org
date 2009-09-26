@@ -105,12 +105,12 @@ html {
 	font-weight: bold;
 }
 
-.footer {
-	width: 300px;
-	margin: auto;
+.footer .nav span {
+	font-weight: bold;
+	text-decoration: underline;
 }
 
-.footer ul.nav {
+.footer ul {
 	padding-bottom: 0.5em;
 }
 
