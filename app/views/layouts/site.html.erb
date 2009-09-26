@@ -8,13 +8,13 @@
     <div class="success"><%= flash[:success] %></div>
   <% end %>
 
-  <%= yield %>
-
-  <div id="join_us">
-    <h2>Join Us</h2>
-    <p>To get our monthly update and most important notifications, join our email list:</p>
+  <%- unless current_page?(root_path) -%>
+  <div class="right">
     <%= render 'supporters/mail_chimp_sign_up_form' %>
   </div>
+  <%- end -%>
+  <%= yield %>
+
 <%- end -%>
 <%- content_for :footer do -%>
   <ul class="nav left">

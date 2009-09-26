@@ -52,6 +52,19 @@ html {
 	content: " \002022  ";
 }
 
+#mc-embedded-subscribe-form {
+	margin: 0 !important;
+	width: 400px;
+}
+
+#mc-embedded-subscribe-form fieldset {
+	padding-top: 1.4em !important;
+}
+
+#mce-EMAIL {
+	width: 70% !important;
+}
+
 .content {
 	padding: 1.5em 3em;
 }
