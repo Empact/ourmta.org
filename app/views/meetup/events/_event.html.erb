@@ -1,0 +1,10 @@
+<div class="left location">
+  <%= event_time(event) %>
+  <address class="bottom">
+    <%= link_to event.venue_name, venue_url(event) %><br />
+    <%= event.venue_address1 %><br />
+    <%= event.venue_city %>, <%= event.venue_state %> <%= event.venue_zip %>
+  </address>
+</div>
+<h3><%= link_to event.name, event.event_url %></h3>
+<p class="bottom"><%= event.description %></p>

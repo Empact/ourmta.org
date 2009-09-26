@@ -1,12 +1,11 @@
 class Meetup::Event
   class << self
+    def event_url
+      'http://api.meetup.com/events.json/?' + {:key => Meetup::API_KEY, :group_urlname => Meetup::GROUP_URL_NAME}.map {|k, v| "#{k}=#{v}"}.join('&')
+    end
+    
     def all
-      if @all && @last_requested && @last_requested < 1.day.ago
-        @all
-      else
-        @last_requested = DateTime.now
-        @all = RestClient.get('http://api.meetup.com/events.json/?' + {:key => Meetup::API_KEY, :group_urlname => Meetup::GROUP_URL_NAME}.map {|k, v| "#{k}=#{v}"}.join('&'))
-      end
+      @all ||= JSON.parse(RestClient.get(event_url))['results'].map {|result| OpenStruct.new(result) }
     end
   end
 end

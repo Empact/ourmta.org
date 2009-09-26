@@ -15,4 +15,12 @@ module ApplicationHelper
   def slogan
     'Because New York Deserves Better Transit'
   end
+
+  def event_time(event)
+    DateTime.parse(event.time).to_s(:event)
+  end
+
+  def venue_url(event)
+    "http://www.meetup.com/FixMta-Action-Meetup-Group/venue/#{event.venue_id}/"
+  end
 end
