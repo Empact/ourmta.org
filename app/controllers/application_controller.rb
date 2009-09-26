@@ -7,14 +7,6 @@ class ApplicationController < ActionController::Base
 
   layout 'site'
 
-  before_filter :prepare_supporter
-
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
-
-  private
-
-  def prepare_supporter
-    @supporter = Supporter.new
-  end
 end
