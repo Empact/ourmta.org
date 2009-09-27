@@ -1,7 +1,8 @@
 <%- content_for :header do -%>
   <ul class="nav">
     <%= render 'information/links' %>
-    <%= render 'actions/links' %>
+    <li><%= link_to_unless_current 'Suggest a Fix', suggestions_information_path %></li>
+    <li><%= link_to 'Join the Meetup', meetup_group_path %></li>
   </ul>
 <%- end -%>
 <%- content_for :content do -%>
@@ -28,8 +29,9 @@
     <div class="column span-5">
       <span>Actions</span>
       <ul class="nav">
-        <%= render 'actions/links' %>
         <li><%= link_to 'Join the Meetup', meetup_group_path %></li>
+        <li><%= link_to_unless_current 'Suggest a Fix', suggestions_information_path %></li>
+        <li><%= link_to_unless_current 'Picture the Problem', picture_the_problem_information_path %></li>
       </ul>
     </div>
     <div class="last column span-5">
