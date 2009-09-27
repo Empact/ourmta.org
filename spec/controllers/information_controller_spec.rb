@@ -10,7 +10,7 @@ describe InformationController do
 
     it "should return the home page" do
       do_get
-      response.body.should include("Welcome to FixMta.org")
+      response.body.should include("Welcome to FixMTA")
     end
 
     it_should_behave_like "has sign-up screen"
