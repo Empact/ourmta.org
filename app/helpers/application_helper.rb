@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def blog_path
-    'http://fixmta.tumblr.com/'
+    'http://blog.ourmta.org/'
   end
 
   def meetup_group_path
@@ -13,7 +13,7 @@ module ApplicationHelper
   end
 
   def slogan
-    'Because New York Deserves Better Transit'
+    'Helping New York City Transit Work for New Yorkers'
   end
 
   def event_time(event)

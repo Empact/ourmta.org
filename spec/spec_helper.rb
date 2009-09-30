@@ -20,12 +20,6 @@ Spec::Runner.configure do |config|
   config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
   config.include(Fixjour)
 
-  config.before do
-    if @request
-      @request.env["HTTP_AUTHORIZATION"] = "Basic " + Base64::encode64([ENV['FIXMTA_BETA_USERNAME'], ENV['FIXMTA_BETA_PASSWORD']].join(':'))
-    end
-  end
-
   # == Fixtures
   #
   # You can declare fixtures for each example_group like this:

@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title>FixMTA: <%= @page_title || slogan %></title>
+    <title>OurMTA: <%= @page_title || slogan %></title>
     <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen, projection' %>
     <%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
     <!--[if lt IE 8]>
@@ -14,7 +14,7 @@
   <body class="frame">
     <div class="container">
       <div class="header">
-        <span class="masthead"><%= link_to_unless_current 'FixMTA', root_path %></span>
+        <span class="masthead"><%= link_to_unless_current 'OurMTA', root_path %></span>
         <span class="slogan"><%= slogan %></span>
         <%= yield :header %>
       </div>
