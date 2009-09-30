@@ -1,7 +1,7 @@
 <h2>Upcoming Events</h2>
 
 <%- events = Meetup::Event.all -%>
-<%- if events -%>
+<%- if events.present? -%>
 <ol class="events">
   <%- events.each do |event| -%>
     <li><%= render 'meetup/events/event', :event => event %></li>
