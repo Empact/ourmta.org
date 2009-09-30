@@ -9,7 +9,7 @@ module ApplicationHelper
   end
 
   def meetup_group_path
-    'http://www.meetup.com/FixMta-Action-Meetup-Group/'
+    'http://www.meetup.com/OurMTA-Action-Meetup-Group/'
   end
 
   def slogan
@@ -21,6 +21,6 @@ module ApplicationHelper
   end
 
   def venue_url(event)
-    "http://www.meetup.com/FixMta-Action-Meetup-Group/venue/#{event.venue_id}/"
+    "#{meetup_group_path}venue/#{event.venue_id}/"
   end
 end
