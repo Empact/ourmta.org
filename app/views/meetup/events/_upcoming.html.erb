@@ -3,7 +3,7 @@
 <%- events = Meetup::Event.all -%>
 <%- if events -%>
 <ol class="events">
-  <%- .each do |event| -%>
+  <%- events.each do |event| -%>
     <li><%= render 'meetup/events/event', :event => event %></li>
   <%- end -%>
 </ol>
