@@ -7,6 +7,16 @@ class ApplicationController < ActionController::Base
 
   layout 'site'
 
+  before_filter :ensure_domain
+
+  DOMAIN = 'ourmta.org'
+
+  def ensure_domain
+    if request.env['HTTP_HOST'] != DOMAIN
+      redirect_to DOMAIN
+    end
+  end
+
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end
