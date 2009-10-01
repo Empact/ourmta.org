@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
   def ensure_domain
     if request.env['HTTP_HOST'] != DOMAIN
-      redirect_to DOMAIN
+      redirect_to root_url
     end
   end
 
