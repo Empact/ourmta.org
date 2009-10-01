@@ -20,6 +20,7 @@ Rails::Initializer.run do |config|
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'json'
+  config.gem 'hpricot'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -41,5 +42,6 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
+require 'hpricot'
 require 'ostruct'
 Time::DATE_FORMATS[:event] = lambda {|time| time.strftime("%A, %b #{time.day}, #{time.hour % 12} %p") }

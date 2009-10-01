@@ -1,0 +1,9 @@
+<h2>Latest News</h2>
+
+<%- post = BlogPost.first -%>
+<div class="section blog_post">
+  <h3><%= link_to post.title, post.url %></h3>
+  <span class="data"><%= post.posted_on.to_s(:human) %></span>
+  <%= truncate_html post.body, 500 %>
+  <%= link_to 'read more...', post.url %>
+</div>
