@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
 
   layout 'site'
 
-  before_filter :ensure_domain
+  before_filter :ensure_domain, :if => lambda { Rails.env.production? }
 
   DOMAIN = 'ourmta.org'
 
