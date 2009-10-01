@@ -4,7 +4,7 @@
 <%- if events.present? -%>
 <ol class="events">
   <%- events.each do |event| -%>
-    <li><%= render 'meetup/events/event', :event => event %></li>
+    <li><div class="section"><%= render 'meetup/events/event', :event => event %></div></li>
   <%- end -%>
 </ol>
 <p>For more, <%= link_to 'join our Meetup group', meetup_group_path %></p>
