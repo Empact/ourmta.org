@@ -91,6 +91,12 @@ html {
 	margin: 0 1.5em 1.5em;
 }
 
+.blog_post .date {
+	float: right;
+	font-weight: bold;
+	padding: 0.3em;
+}
+
 .section {
 	border: solid 4px #A6A6A6;
 	padding: .5em;
