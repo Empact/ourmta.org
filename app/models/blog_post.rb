@@ -6,7 +6,7 @@ class BlogPost
   end
 
   def initialize(json)
-    @attrs = JSON.parse(json.sub('var tumblr_api_read = ', '').chop)['posts'][0]
+    @attrs = JSON.parse(json.sub('var tumblr_api_read = ', '').sub(/; *$/, ''))['posts'][0]
   end
   
   def url
