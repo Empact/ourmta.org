@@ -42,6 +42,7 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
+String.send :include, TruncateHtml
 require 'hpricot'
 require 'ostruct'
 Time::DATE_FORMATS[:event] = lambda {|time| time.strftime("%A, %b #{time.day}, #{time.hour % 12} %p") }

@@ -4,6 +4,6 @@
 <div class="section blog_post">
   <h3><%= link_to post.title, post.url %></h3>
   <span class="data"><%= post.posted_on.to_s(:human) %></span>
-  <%= truncate_html post.body, 500 %>
+  <%= post.body.truncate_html 500 %>
   <%= link_to 'read more...', post.url %>
 </div>
