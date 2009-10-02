@@ -1,8 +1,10 @@
 class Meetup::Event
   class << self
     def event_url
-      raise "Meetup API_KEY missing" unless Meetup::API_KEY
-      raise "Meetup GROUP_URL_NAME missing" unless Meetup::GROUP_URL_NAME
+      if Rails.env.production?
+        raise "Meetup API_KEY missing" unless Meetup::API_KEY
+        raise "Meetup GROUP_URL_NAME missing" unless Meetup::GROUP_URL_NAME        
+      end
       'http://api.meetup.com/events.json/?' + {:key => Meetup::API_KEY, :group_urlname => Meetup::GROUP_URL_NAME}.map {|k, v| "#{k}=#{v}"}.join('&')
     end
     
