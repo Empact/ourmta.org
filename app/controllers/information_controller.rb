@@ -4,7 +4,7 @@ class InformationController < ApplicationController
   end
 
   def problems
-    expires_in 24.hours, :public => true
+    redirect_to possibilities_information_path
   end
 
   def possibilities
