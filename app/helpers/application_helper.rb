@@ -13,7 +13,7 @@ module ApplicationHelper
   end
 
   def slogan
-    'Helping New York City Transit Work for New Yorkers'
+    'Helping Transit Work for New Yorkers'
   end
 
   def event_time(event)
