@@ -11,10 +11,6 @@ class InformationController < ApplicationController
     expires_in 24.hours, :public => true
   end
 
-  def proposal
-    expires_in 24.hours, :public => true
-  end
-
   def placeholder
     expires_in 24.hours, :public => true
   end

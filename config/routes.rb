@@ -35,8 +35,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :supporters, :collection => {:thank_you => :get}
 
   map.with_options :controller => "information" do |map|
-    %w(problems possibilities proposal people suggestions picture_the_problem).each do |action|
+    %w(possibilities people).each do |action|
       map.send(:"#{action}_information", action, :action => action)
+    end
+  end
+
+  map.with_options :controller => "actions" do |map|
+    %w(suggestions stories).each do |action|
+      map.send(:"#{action}_actions", action, :action => action)
     end
   end
 

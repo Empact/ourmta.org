@@ -23,13 +23,6 @@ describe InformationController do
     it_should_behave_like "has sign-up screen"
   end
 
-  describe "GET problems" do
-    def do_get
-      get :people
-    end
-    it_should_behave_like "has sign-up screen"
-  end
-
   describe "GET possibilities" do
     def do_get
       get :possibilities
