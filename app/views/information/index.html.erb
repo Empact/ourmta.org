@@ -1,6 +1,10 @@
 <div class="clearfix">
-  <div class="picture right" style="width: 55%;"><%= link_to image_tag('empty_platform.jpg', :size => '485x364'), 'http://www.flickr.com/photos/99887786@N00/3054677393/' %>
-    <blockquote><p>The photographer writes: "I was shocked. The subway is an iconic New York thing... but [it] has not seen the kind of improvements/overhauls necessary to bring it to the 21st century. While New York maintains their subway, I think they also take it for granted." <cite cite="http://www.flickr.com/photos/99887786@N00/3054677393/" rel="cc by-nc-nd"><%= link_to 'source', 'http://www.flickr.com/photos/99887786@N00/3054677393/' %></p></blockquote></div>
+  <div class="picture right" style="width: 55%;" about="<%= image_path('empty_platform.jpg') %>">
+    <%= link_to image_tag('empty_platform.jpg', :size => '485x364'), 'http://www.flickr.com/photos/99887786@N00/3054677393/' %>
+    <p>The photographer writes: <q>"I was shocked. The subway is an iconic New York thing... but [it] has not seen the kind of improvements/overhauls necessary to bring it to the 21st century. While New York maintains their subway, I think they also take it for granted."</q>
+    <%= link_to 'source', 'http://www.flickr.com/photos/99887786@N00/3054677393/', :rel => 'dc:source' %>
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/" class="hide">Creative Commons Attribution-Non Commercial-No Derivatives 3.0 United States License</a></p>
+  </div>
 
   <h2>Welcome to OurMTA</h2>
   <p>New York is supposedly the shining example of Mass Transit in America: our subway system is the largest in the world, and the only that runs 24-hours a day.</p>

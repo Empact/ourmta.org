@@ -2,7 +2,12 @@
 
 <div class="clearfix" id="automated">
   <h2>Trains without Waiting</h2>
-  <div class="picture right"><%= image_tag 'Paris boarding line 14.jpg', :alt => "Paris' line 14 automatic train stopped for boarding at the station", :size => '591x443' %><p>Paris' automatic, driverless trains are so frequent that the arrival time is shown in seconds, rather than minutes. Platform-side doors make the stations safer, quieter and more pleasant. - <cite cite="http://www.flickr.com/photos/meteorry/526482410" rel="with permission"><%= link_to 'source', 'http://www.flickr.com/photos/meteorry/526482410' %></cite></p></div>
+  <div class="picture right" about="<%= image_path('Paris boarding line 14.jpg') %>">
+  	<%= image_tag 'Paris boarding line 14.jpg', :alt => "Paris' line 14 automatic train stopped for boarding at the station", :size => '591x443' %>
+  	<p>Paris' automatic, driverless trains are so frequent that the arrival time is shown in seconds, rather than minutes. Platform-side doors make the stations safer, quieter and more pleasant. -
+  	<%= link_to 'source', 'http://www.flickr.com/photos/meteorry/526482410', :rel => 'dc:source' %>
+  	<a rel="license" class="hide">with permission</a></p>
+  </div>
   <p>Imagine arriving at the station, only to have a train appear moments later, every single day.  Imagine never again hearing the words "delayed because of train traffic ahead of us".</p>
   <p>Paris' newest line runs so frequently that the arrival time is shown in seconds, rather than minutes.  The trains run like clockwork, as little as a minute apart throughout the day and night, because this line is stocked with state-of-the-art driverless trains, <a href="http://en.wikipedia.org/wiki/List_of_driverless_trains">in use around the world</a>.</p>
   <p>Not only does this save tremendously on wait times, but trains suddenly aren't crowded anymore when you have many more of them running smoothly over the same lines.  And because automated systems are so reliable, you may never in your life experience a delay on such a train.  Finally, automatic trains are also safer, because platform-side doors separate those waiting from the tracks; they also make for quieter, more pleasant stations.</p>
@@ -19,7 +24,12 @@
 
   <div class="clearfix" id="bloat">
     <h2>A Leaner MTA means Lower Fares, More Progress</h2>
-    <div class="picture right"><%= link_to image_tag('taking_a_hike.jpg', :size => '591x554'), 'http://davies.lohudblogs.com/2009/03/25/taking-a-hike/' %><p>Riders struggle under the weight of so many unnecessary MTA bureaucrats - <cite cite="http://davies.lohudblogs.com/2009/03/25/taking-a-hike/" rel="permission"><%= link_to 'source', 'http://davies.lohudblogs.com/2009/03/25/taking-a-hike/' %>, <%= link_to 'creator', 'http://davies.lohudblogs.com/' %></p></div>
+    <div class="picture right" about="<%= image_path('taking_a_hike.jpg') %>">
+      <%= link_to image_tag('taking_a_hike.jpg', :size => '591x554'), 'http://davies.lohudblogs.com/2009/03/25/taking-a-hike/' %><p>Riders struggle under the weight of so many unnecessary MTA bureaucrats -
+      <%= link_to 'source', 'http://davies.lohudblogs.com/2009/03/25/taking-a-hike/', :rel => 'dc:source' %>,
+      <%= link_to 'creator', 'http://davies.lohudblogs.com/', :rel => 'dc:creator' %>
+      <a rel="license" class="hide">with permission</a></p>
+    </div>
     <p>In the early days of the New York subway, <a href="http://www.nytimes.com/interactive/2008/11/23/nyregion/20081123_MTA_GRAPHIC.html">fares were equivalent to just $1 today</a>, and that low fare was enough to fund the complete construction and operation of nearly the entire subway system currently in use (built between 1910 and 1940).</p>
 
     <p>Today, the MTA threatens to cut service and push fares to $3.  But why should a system which isn't even building new capacity cost three times as much as a rapidly expanding system?  Because, as <a href="http://www.nydailynews.com/news/2007/12/17/2007-12-17_news_finds_mta_waste_and_bloat-5.html">the New York Daily News reported</a>, the MTA is a bloated, top-heavy organization with dozens of unnecessary high-payed employees:</p>
@@ -39,14 +49,24 @@
 
 <div class="clearfix" id="stations">
   <h2>Breathtaking Stations</h2>
-  <div class="picture right"><%= link_to image_tag('historic_city_hall_station.jpg', :size => '591x398', :alt => 'The Historic City Hall station of New York, no longer in use'), 'http://www.nycsubway.org/perl/stations?5:979' %><p>This beautiful  subway station, built in 1904, sits unused beneath New York - <cite cite="http://www.nycsubway.org/perl/show?83210" rel="permission"><%= link_to 'source', 'http://www.nycsubway.org/perl/show?83210' %>, <%= link_to 'creator', 'http://willscarlett.aminus3.com/' %></cite></p></div>
+  <div class="picture right" about="<%= image_path('historic_city_hall_station.jpg') %>">
+    <%= link_to image_tag('historic_city_hall_station.jpg', :size => '591x398', :alt => 'The Historic City Hall station of New York, no longer in use'), 'http://www.nycsubway.org/perl/stations?5:979' %><p>This beautiful  subway station, built in 1904, sits unused beneath New York -
+    <%= link_to 'source', 'http://www.nycsubway.org/perl/show?83210', :rel => 'dc:source' %>,
+    <%= link_to 'creator', 'http://willscarlett.aminus3.com/', :rel => 'dc:creator' %>
+    <a rel="license" class="hide">with permission</a></p>
+  </div>
   <p>While the stations of the subway are now often dirty, ugly,  marginally welcoming places, this was not always the case.  New York City once had the imagination to build stations which were beautiful as well as practical.  <%= link_to 'The City Hall station', 'http://www.nycsubway.org/perl/stations?5:979' %> remains the most impressive subway station in New York, and yet it hasn't been used since the 1945.</p>
   <p>Meanwhile, across the country and across the world, city after city has shown what beautiful places the subway stations can be.  With our vision of the MTA, we can once again see stations which are inspire as well as serve.</p>
 </div>
 
 <div class="clearfix" id="coverage">
   <h2>More Lines Where You Need Them</h2>
-  <div class="picture right"><%= link_to image_tag('Tokyo_metro_history_map.gif', :size => '591x443', :alt => 'Time-lapse rendering of Tokyo Metro lines, 1927 - 2008', :size => '591x364'), 'http://en.wikipedia.org/wiki/Tokyo_subway' %><p>Tokyo Metro lines, 1927 - 2008; the bulk of Tokyo's subway development has occurred in the last 60 years, a time when New York's system has stagnated  - <cite cite="http://en.wikipedia.org/wiki/File:Tokyo_metro_history_map.gif" rel="gfdl"><%= link_to 'source', 'http://en.wikipedia.org/wiki/File:Tokyo_metro_history_map.gif' %></cite></p></div>
+  <div class="picture right" about="<%= image_path('Tokyo_metro_history_map.gif') %>">
+    <%= link_to image_tag('Tokyo_metro_history_map.gif', :size => '591x443', :alt => 'Time-lapse rendering of Tokyo Metro lines, 1927 - 2008', :size => '591x364'), 'http://en.wikipedia.org/wiki/Tokyo_subway' %><p>Tokyo Metro lines, 1927 - 2008; the bulk of Tokyo's subway development has occurred in the last 60 years, a time when New York's system has stagnated -
+    <%= link_to 'source', 'http://en.wikipedia.org/wiki/File:Tokyo_metro_history_map.gif', :rel => 'dc:source' %>
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/" class="hide">
+Creative Commons Attribution-Share Alike 3.0 United States License</a></p>
+  </div>
   <p>The New York transit system as it is today was built decades ago.  Every line we currently have, and even those in the progress were created or planned long ago, <%= link_to "in the 1930s", 'http://en.wikipedia.org/wiki/Proposed_New_York_City_Subway_expansion_(1929-1940)' %>.  The Second Avenue Line, now slated to open in <%= link_to '2016 or 17', 'http://www.nytimes.com/2009/07/22/nyregion/22second.html?scp=1&sq=new%20subway%20line&st=cse' %>, was on the planning maps <%= link_to 'in 1929', 'http://en.wikipedia.org/wiki/File:1929_IND_Second_System.jpg' %>, nearly 100 years earlier.</p>
   <p>While the MTA has stagnated, foreign systems have been building out at a rapid pace, connecting and serving more and more of their citizenry.  Tokyo's system, as you can see to your right, has been built from nearly nothing in the 1950s to an impressive network of more than a dozen lines, which now serves twice as many riders as the New York system.</p>
   <p>If New York were to build at a fraction the pace, we could bring direct, pleasant, uncrowded access to far more riders and areas, through projects like <a href="http://transit.frumin.net/trx/TriboroRX#Introduction">the Triborough RX</a>, which would directly link Brooklyn, Queens and the Bronx, running from Bay Ridge to Yankee Stadium:</p>
@@ -57,7 +77,12 @@
 
 <div class="clearfix" id="service">
   <h2>Service with a smile</h2>
-  <div class="picture right"><%= link_to image_tag('mta_service_specialists.jpg', :size => '591x394', :alt => 'An MTA Service Specialist of Boring Inc. distributes snacks to MTA passengers'), 'http://mtaservice.org' %><p><a href="http://mtaservice.org">The MTA Service Specialists</a> show that we can have service with a smile on the MTA - <cite cite="http://nyc.indymedia.org/en/2008/04/96110.html" rel="permission"><%= link_to 'source', 'http://nyc.indymedia.org/en/2008/04/96110.html' %>, <%= link_to 'creator', 'http://www.alexnathanson.com/' %></cite></p></div>
+  <div class="picture right" about="<%= image_path('mta_service_specialists.jpg') %>">
+    <%= link_to image_tag('mta_service_specialists.jpg', :size => '591x394', :alt => 'An MTA Service Specialist of Boring Inc. distributes snacks to MTA passengers'), 'http://mtaservice.org' %><p><a href="http://mtaservice.org">The MTA Service Specialists</a> show that we can have service with a smile on the MTA -
+    <%= link_to 'source', 'http://nyc.indymedia.org/en/2008/04/96110.html', :rel => 'dc:source' %>,
+    <%= link_to 'creator', 'http://www.alexnathanson.com/', :rel => 'dc:creator' %>
+    <a rel="license" class="hide">with permission</a>
+  </div>
   <p>In 2008, four young New Yorkers <a href="http://nyc.indymedia.org/en/2008/04/96110.html">took to the subway</a> in a sort of protest against the indifference of the current MTA.  They took matters into their own hands, patrolling the subway, distributing snacks, hand sanitizer and information, doing everything they could to improve the subway environment.</p>
   <p>Now, this was performance art, but they shine a light on the gap between what MTA customer service is and what it could be.  Helpful, cheerful, knowledgeable agents would go a long way towards brightening the environment of the subways, trains and busses, and could be achieved easily:</p>
   <p>Stores often hire "secret shoppers" to test the shopping experience in their stores.  The MTA could do this just as well, to ensure that its own workers are always polite and helpful.  The end result would be a brighter, smoother-running New York transit system.</p>
