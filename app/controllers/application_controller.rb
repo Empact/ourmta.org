@@ -7,16 +7,6 @@ class ApplicationController < ActionController::Base
 
   layout 'site'
 
-  before_filter :ensure_domain, :if => lambda { Rails.env.production? }
-
-  DOMAIN = 'ourmta.org'
-
-  def ensure_domain
-    if request.env['HTTP_HOST'] != DOMAIN
-      redirect_to "http://#{DOMAIN}"
-    end
-  end
-
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 end
