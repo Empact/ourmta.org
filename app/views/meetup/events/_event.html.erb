@@ -7,4 +7,5 @@
   </address>
 </div>
 <h3><%= link_to event.name, event.event_url %></h3>
-<p class="bottom"><%= event.description %></p>
+<p class="bottom"><%= truncate(event.description, :length => 125) %>
+  <%= link_to 'read more...', event.event_url %></p>
