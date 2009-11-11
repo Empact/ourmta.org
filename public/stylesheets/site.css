@@ -136,3 +136,7 @@ blockquote {
 
 .left  { float: left; margin: 0 1.5em 0 0; padding: 0; }
 .right { float: right; margin: 0 0 0 1.5em; }
+
+.meetup_description {
+	min-height: 5em;
+}
