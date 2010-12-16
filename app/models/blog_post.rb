@@ -2,6 +2,8 @@ class BlogPost
   class << self
     def first
       new(RestClient.get('http://blog.ourmta.org/api/read/json?num=1&type=text'))
+    rescue
+      nil
     end
   end
 
