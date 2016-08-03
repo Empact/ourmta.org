@@ -1,7 +1,7 @@
-require File.expand_path(File.dirname(__FILE__) + '/../spec_helper')
+require 'rails_helper'
 
-describe InformationController do
-  integrate_views
+RSpec.describe InformationController, type: :controller do
+  render_views
 
   describe "GET index" do
     def do_get
@@ -10,31 +10,30 @@ describe InformationController do
 
     it "should return the home page" do
       do_get
-      response.body.should include("Welcome to OurMTA")
+      expect(response).to be_success
+      expect(response.body).to include("Our Vision of the Future")
     end
-
-    it_should_behave_like "has sign-up screen"
   end
 
-  describe "GET problems" do
+  describe "GET people" do
     def do_get
-      get :problems
+      get :people
     end
-    it_should_behave_like "has sign-up screen"
+
+    it 'renders' do
+      do_get
+      expect(response).to be_success
+    end
   end
 
   describe "GET possibilities" do
     def do_get
       get :possibilities
     end
-    it_should_behave_like "has sign-up screen"
-  end
 
-  describe "GET suggestions" do
-    def do_get
-      get :suggestions
+    it 'renders' do
+      do_get
+      expect(response).to be_success
     end
-    it_should_behave_like "has sign-up screen"
   end
-
 end

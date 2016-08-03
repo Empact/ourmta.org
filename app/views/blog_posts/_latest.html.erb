@@ -4,7 +4,7 @@
 <div class="section blog_post">
   <span class="date"><%= post.posted_on.to_s(:long) %></span>
   <h3><%= link_to post.title, post.url %></h3>
-  <%= post.body %>
+  <%= sanitize post.body %>
 </div>
 <%- end -%>
 <p>For more, see <%= link_to 'our blog', blog_path %></p>

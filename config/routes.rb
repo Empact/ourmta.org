@@ -1,4 +1,4 @@
-ActionController::Routing::Routes.draw do |map|
+OurMta::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
@@ -17,7 +17,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+
   # Sample resource route with more complex sub-resources
   #   map.resources :products do |products|
   #     products.resources :comments
@@ -30,27 +30,22 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
-  map.root :controller => "information", :action => "index"
+  root :controller => "information", :action => "index"
 
-  map.resources :supporters, :collection => {:thank_you => :get}
+  resources :supporters, :collection => {:thank_you => :get}
 
-  map.with_options :controller => "information" do |map|
-    %w(possibilities people).each do |action|
-      map.send(:"#{action}_information", action, :action => action)
-    end
-  end
+  get 'possibilities' => 'information#possibilities', as: 'possibilities_information'
+  get 'people' => 'information#people', as: 'people_information'
+  get 'problems' => redirect('possibilities')
 
-  map.with_options :controller => "actions" do |map|
-    %w(suggestions stories).each do |action|
-      map.send(:"#{action}_actions", action, :action => action)
-    end
-  end
+  get 'suggestions' => 'actions#suggestions', as: 'suggestions_actions'
+  get 'stories' => 'actions#stories', as: 'stories_actions'
 
   # See how all your routes lay out with "rake routes"
 
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  # connect ':controller/:action/:id'
+  # connect ':controller/:action/:id.:format'
 end
