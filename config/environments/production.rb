@@ -32,6 +32,8 @@ Rails.application.configure do
   # Enable threaded mode
   # config.threadsafe!
 
+  config.log_level = :info
+
   # Compress JavaScripts and CSS
   config.assets.compress = true
 
