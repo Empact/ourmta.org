@@ -32,8 +32,6 @@ OurMta::Application.routes.draw do
 
   root :controller => "information", :action => "index"
 
-  resources :supporters, :collection => {:thank_you => :get}
-
   get 'possibilities' => 'information#possibilities', as: 'possibilities_information'
   get 'people' => 'information#people', as: 'people_information'
   get 'problems' => redirect('possibilities')
