@@ -7,6 +7,8 @@ gem 'rails', '4.2.7'
 gem 'rest-client'
 gem 'json'
 gem 'jquery-rails'
+gem 'puma'
+gem 'rack-timeout'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.5'
@@ -20,4 +22,8 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
