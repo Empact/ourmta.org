@@ -2,8 +2,8 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails'
 # Pick the frameworks you want:
-require 'active_model/railtie'
-require 'active_record/railtie'
+# require 'active_model/railtie'
+# require 'active_record/railtie'
 require 'action_controller/railtie'
 require 'action_mailer/railtie'
 require 'action_view/railtie'
@@ -30,8 +30,5 @@ module OurMta
 
     config.assets.enabled = true
     config.assets.version = '1.0'
-
-    config.active_record.raise_in_transactional_callbacks = true
-    config.active_record.schema_format = :sql
   end
 end

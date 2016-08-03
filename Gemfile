@@ -7,7 +7,6 @@ gem 'rails', '4.2.7'
 gem 'rest-client'
 gem 'json'
 gem 'jquery-rails'
-gem 'sqlite3'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.5'
