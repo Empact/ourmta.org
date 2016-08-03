@@ -38,8 +38,8 @@ OurMta::Application.routes.draw do
   get 'people' => 'information#people', as: 'people_information'
   get 'problems' => redirect('possibilities')
 
-  get 'suggestions' => 'actions#suggestions', as: 'suggestions_actions'
   get 'stories' => 'actions#stories', as: 'stories_actions'
+  get 'suggestions' => redirect('/')
 
   # See how all your routes lay out with "rake routes"
 
