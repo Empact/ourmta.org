@@ -10,7 +10,7 @@ RSpec.describe ActionsController, type: :controller do
 
     it 'renders' do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   end
 end

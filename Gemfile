@@ -12,6 +12,7 @@ gem 'rack-timeout', require: 'rack/timeout/base'
 
 group :assets do
   gem 'uglifier',     '>= 1.0.3'
+  gem 'yui-compressor'
 end
 
 group :test, :development do

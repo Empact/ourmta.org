@@ -10,7 +10,7 @@ RSpec.describe InformationController, type: :controller do
 
     it "should return the home page" do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
       expect(response.body).to include("Our Vision of the Future")
     end
   end
@@ -22,7 +22,7 @@ RSpec.describe InformationController, type: :controller do
 
     it 'renders' do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   end
 
@@ -33,7 +33,7 @@ RSpec.describe InformationController, type: :controller do
 
     it 'renders' do
       do_get
-      expect(response).to be_success
+      expect(response).to be_successful
     end
   end
 end
