@@ -11,8 +11,6 @@ gem 'puma'
 gem 'rack-timeout'
 
 group :assets do
-  gem 'sass-rails',   '~> 4.0.5'
-  gem 'coffee-rails', '~> 4.2.1'
   gem 'uglifier',     '>= 1.0.3'
 end
 
